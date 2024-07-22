@@ -1,0 +1,58 @@
+{
+    color: #FFFFFF
+    font: gui/theme/Roboto-Medium.ttf
+    size: 30
+    [label] {
+        [menu_menu_title] {
+            font: gui/theme/Roboto-Black.ttf
+            size: 150
+        }
+    }
+    [button.forground] {
+        font: gui/theme/Roboto-Black.ttf
+        color.hovered: #808080
+    }
+    [button.background] {
+        image: gui/theme/pixel.png
+        color: #404040
+        sound: gui/theme/buttonDown.wav
+        sound.hovered: gui/theme/buttonUp.wav
+    }
+    [panel] {
+        image: gui/theme/square_filled.png#pixel
+		color: #FFFFFFA0
+		size: 8
+        [overlay] {
+            image: gui/theme/pixel.png
+            color: #000000A0
+        }
+    }
+    [navigator] {
+        image: gui/theme/square.png#pixel
+		color: #FFFF00AA
+		size: 10
+    }
+    [progressbar] {
+        image: gui/theme/pixel.png
+        color: #FFFFFF
+    }
+    [progressbar.background] {
+        image: gui/theme/pixel.png
+        color: #000000
+    }
+    [slider.forground] {
+        image: gui/theme/pixel.png
+    }
+    [slider.background] {
+        image: gui/theme/square_filled.png#pixel
+		color: #FFFFFFA0
+		size: 8
+    }
+    [image] {
+    }
+    [textarea] {
+        font: gui/theme/RobotoMono-Medium.ttf
+    }
+    [textfield] {
+    }
+}

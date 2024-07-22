@@ -1,0 +1,48 @@
+[HUD] {
+    stretch: true
+
+    [HEALTH] {
+        layout: horizontalflow
+        alignment: topleft
+        size: 100, 100
+        margin: 10
+    }
+
+    {
+        layout: horizontal
+        alignment: topleft
+        margin: 10, 40
+        [WEAPON] {
+            @ref: ITEMBOX
+        }
+        [ARMOR] {
+            @ref: ITEMBOX
+        }
+        [SHIELD] {
+            @ref: ITEMBOX
+        }
+    }
+
+    [QUEST] {
+        alignment: bottomleft
+        size: 128, 32
+        margin: 10
+        type: label
+        text_alignment: left
+    }
+}
+
+[@ITEMBOX] {
+    layout: vertical
+    [ICON] {
+        size: 32, 32
+        type: image
+        image: 32rogues/items.png
+    }
+    [BAR] {
+        size: 32, 8
+        type: progressbar
+        visible: false
+    }
+    margin: 1
+}

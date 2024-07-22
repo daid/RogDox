@@ -1,0 +1,317 @@
+[MAIN_MENU] {
+    stretch: true
+
+    [TITLE] {
+        alignment: top
+        type: label
+        theme_data: menu_menu_title
+        caption: RogDox
+        scale_to_text: true
+    }
+
+    {
+        layout: vertical
+        alignment: bottom
+        
+        [START] {
+            @ref: MAIN_BUTTON
+            caption: START
+
+            {
+                type: keynavigator
+                margin: -5
+                stretch: true
+                select: PRIMARY
+            }
+        }
+
+        [OPTIONS] {
+            @ref: MAIN_BUTTON
+            caption: OPTIONS
+        }
+
+        [CREDITS] {
+            @ref: MAIN_BUTTON
+            caption: CREDITS
+        }
+
+        [QUIT] {
+            @ref: MAIN_BUTTON
+            caption: QUIT
+        }
+    }
+}
+
+[OPTIONS_MENU] {
+    stretch: true
+
+    [OPTIONS] {
+        layout: vertical
+        alignment: center
+        
+        [EFFECT_VOLUME] {
+            @ref: OPTIONS_SLIDER LABEL=Effect volume:
+        }
+        [MUSIC_VOLUME] {
+            @ref: OPTIONS_SLIDER LABEL=Music volume:
+        }
+        
+        [CONTROLS] {
+            @ref: MAIN_BUTTON
+            caption: Controls
+        }
+    }
+
+    {
+        layout: vertical
+        alignment: bottom
+        [BACK] {
+            @ref: MAIN_BUTTON
+            caption: BACK
+            keybinding: ESCAPE
+            {
+                type: keynavigator
+                margin: -5
+                stretch: true
+                select: PRIMARY
+            }
+        }
+    }
+}
+
+[CONTROLS_MENU] {
+    stretch: true
+
+    [KEYS] {
+        layout: vertical
+        alignment: center
+    }
+
+    {
+        layout: vertical
+        alignment: bottom
+        [BACK] {
+            @ref: MAIN_BUTTON
+            caption: BACK
+            keybinding: ESCAPE
+            {
+                type: keynavigator
+                margin: -5
+                stretch: true
+                select: PRIMARY
+            }
+        }
+    }
+}
+
+[CREDITS_MENU] {
+    stretch: true
+    
+    [CREDITS] {
+        layout: vertical
+        position: 0, 400
+        alignment: top
+        {
+            @ref: CREDITS_SECTION
+            caption: Art and Assets
+        }
+        {
+            @ref: CREDITS_TITLE
+            caption: Fonts:
+        }
+        {
+            @ref: CREDITS_LINE
+            caption: https://fonts.google.com/specimen/Roboto
+        }
+
+        {
+            @ref: CREDITS_TITLE
+            caption: Art:
+        }
+        {
+            @ref: CREDITS_LINE
+            caption: https://sethbb.itch.io/32rogues
+        }
+
+        {
+            @ref: CREDITS_TITLE
+            caption: Music:
+        }
+        {
+            @ref: CREDITS_LINE
+            caption: Copyright 2021 Joseph Collard https://opengameart.org/content/rpg-underworld-theme-loop
+        }
+
+        {
+            @ref: CREDITS_SECTION
+            caption: Code
+        }
+        {
+            @ref: CREDITS_TITLE
+            caption: SeriousProton2 Engine
+        }
+        {
+            @ref: CREDITS_LINE
+            caption: https://github.com/daid/SeriousProton2
+        }
+        {
+            @ref: CREDITS_TITLE
+            caption: miniz library: MIT License
+        }
+        {
+            @ref: CREDITS_LINE
+            caption: Copyright 2013-2014 RAD Game Tools and Valve Software\
+                Copyright 2010-2014 Rich Geldreich and Tenacious Software LLC
+        }
+        {
+            @ref: CREDITS_TITLE
+            caption: lua library: MIT License
+        }
+        {
+            @ref: CREDITS_LINE
+            caption: Copyright (C) 1994-2015 Lua.org, PUC-Rio
+        }
+        {
+            @ref: CREDITS_TITLE
+            caption: json11 library: MIT License
+        }
+        {
+            @ref: CREDITS_LINE
+            caption: Copyright (C) 2013 Dropbox, Inc.
+        }
+        {
+            @ref: CREDITS_TITLE
+            caption: freetype2 library: BSD License
+        }
+        {
+            @ref: CREDITS_LINE
+            caption: Portions of this software are copyright ©\
+                2006 The FreeType Project (www.freetype.org).\
+                All rights reserved.
+        }
+        {
+            @ref: CREDITS_TITLE
+            caption: bullet3d library: zlib License
+        }
+        {
+            @ref: CREDITS_LINE
+            caption: Bullet Continuous Collision Detection and Physics Library\
+                http://bulletphysics.org
+        }
+        {
+            @ref: CREDITS_TITLE
+            caption: box2d library: zlib License
+        }
+        {
+            @ref: CREDITS_LINE
+            caption: Copyright (c) 2006-2013 Erin Catto http://www.gphysics.com
+        }
+        {
+            @ref: CREDITS_TITLE
+            caption: SDL2 library: zlib License
+        }
+        {
+            @ref: CREDITS_LINE
+            caption: Copyright (C) 1997-2019 Sam Lantinga slouken@libsdl.org
+        }
+        {
+            @ref: CREDITS_TITLE
+            caption: gif.h: Public domain
+        }
+        {
+            @ref: CREDITS_LINE
+            caption: Charlie Tangora
+        }
+        {
+            @ref: CREDITS_TITLE
+            caption: stb_image, stb_image_write, stb_vorbis: Public domain
+        }
+        {
+            @ref: CREDITS_LINE
+            caption: http://github.com/nothings
+        }
+    }
+    
+    {
+        layout: vertical
+        alignment: bottom
+        [BACK] {
+            @ref: MAIN_BUTTON
+            caption: BACK
+            keybinding: ESCAPE
+            {
+                type: keynavigator
+                margin: -5
+                stretch: true
+                select: PRIMARY
+            }
+        }
+    }
+}
+
+[@MAIN_BUTTON] {
+    type: button
+    size: 200, 50
+    margin: 10
+    alignment: center
+}
+[@OPTIONS_SLIDER] {
+    layout: vertical
+    {
+        size: 300, 30
+        {
+            type: label
+            caption: {LABEL}
+            text.alignment: left
+            stretch: true
+        }
+        [VALUE] {
+            type: label
+            caption: XXX
+            text.alignment: right
+            stretch: true
+        }
+    }
+    [SLIDER] {
+        size: 300, 30
+        type: slider
+        range: 100
+    }
+}
+[@CONTROLS_KEYBINDING] {
+    layout: horizontal
+    [NAME] {
+        type: label
+        fill_height: true
+        size: 100, 20
+        caption: ...
+        text.size: 20
+        text.alignment: right
+        margin: 0, 5, 0, 0
+    }
+}
+[@CONTROLS_KEYBINDING_BUTTON] {
+    type: button
+    size: 100, 20
+    caption: ...
+    text.size: 15
+    margin: 2, 0
+}
+[@CREDITS_SECTION] {
+    type: label
+    scale_to_text: true
+    text.size: 25
+    alignment: center
+}
+[@CREDITS_TITLE] {
+    type: label
+    scale_to_text: true
+    text.size: 15
+    text.alignment: left
+}
+[@CREDITS_LINE] {
+    type: label
+    scale_to_text: true
+    text.size: 10
+    text.alignment: left
+}
